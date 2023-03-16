@@ -5,7 +5,7 @@ const fs = require("fs");
 //@access public
 const getAllUsers = (req, res) => {
   const usersJson = fs.readFileSync('./db/users.json');
-  res.status(200).json(usersJson);
+  res.status(200).json(`${usersJson}`);
 };
 
 //@desc Create new user
@@ -26,7 +26,7 @@ const getUser = (req, res) => {
   const usersJson = fs.readFileSync('./db/users.json');
   const users = JSON.parse(usersJson);
   const user = users.find((usr) => Number(usr.id) === Number(req.params.id));
-  res.status(200).json(JSON.stringify(user));
+  res.status(200).json(JSON.stringify(`${JSON.stringify(user)}`));
 };
 
 //@desc Update user
@@ -48,7 +48,7 @@ const updateUser = (req, res) => {
 const deleteUser = (req, res) => {
   const usersJson = fs.readFileSync('./db/users.json');
   const users = JSON.parse(usersJson);
-  const user = movies.find((usr) => Number(usr.id) === Number(req.params.id));
+  const user = users.find((usr) => Number(usr.id) === Number(req.params.id));
   const filteredUsers = users.filter((usr) => Number(usr.id) !== Number(req.params.id));
   fs.writeFileSync('./db/users.json', JSON.stringify(filteredUsers));
   res.status(200).json({message: `Delete User ${JSON.stringify(user)}`})

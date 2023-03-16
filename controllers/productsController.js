@@ -5,7 +5,7 @@ const fs = require("fs");
 //@access public
 const getAllProducts = (req, res) => {
   const productsJson = fs.readFileSync('./db/products.json');
-  res.status(200).json(productsJson);
+  res.status(200).json(`${productsJson}`);
 };
 
 //@desc Create new product
@@ -26,7 +26,7 @@ const getProduct = (req, res) => {
   const productsJson = fs.readFileSync('./db/products.json');
   const products = JSON.parse(productsJson);
   const product = products.find((prod) => Number(prod.id) === Number(req.params.id));
-  res.status(200).json(JSON.stringify(product));
+  res.status(200).json(`${JSON.stringify(product)}`);
 };
 
 //@desc Update product

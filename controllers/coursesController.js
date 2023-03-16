@@ -5,7 +5,7 @@ const fs = require("fs");
 //@access public
 const getAllCourses = (req, res) => {
   const coursesJson = fs.readFileSync('./db/courses.json');
-  res.status(200).json(coursesJson);
+  res.status(200).json(`${coursesJson}`);
 };
 
 //@desc Create new course
@@ -26,7 +26,7 @@ const getCourse = (req, res) => {
   const coursesJson = fs.readFileSync('./db/courses.json');
   const courses = JSON.parse(coursesJson);
   const course = courses.find((crs) => Number(crs.id) === Number(req.params.id));
-  res.status(200).json(JSON.stringify(course));
+  res.status(200).json(`${JSON.stringify(course)}`);
 };
 
 //@desc Update course

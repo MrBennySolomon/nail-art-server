@@ -4,7 +4,7 @@
     "express": "^4.18.2",
     "nodemon": "^2.0.21"
   },
-  "name": "express-crud-movie",
+  "name": "nail-art-server",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

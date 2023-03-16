@@ -1,0 +1,155 @@
+{
+  "courses": [
+    {
+      "id":1,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "start nail",
+      "price": "103",
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":2,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "beginners guide",
+      "price": "200",
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":3,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "start nail advanced",
+      "price": 100,
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":4,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "advanced guide ",
+      "price": "200",
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":5,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "advanced luck",
+      "price": 300,
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":6,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "start nail 2",
+      "price": 100,
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    },
+    {
+      "id":7,
+      "cartCount": 1,
+      "imgUrl": "https://i.etsystatic.com/32607105/r/il/78b9d3/4348342177/il_1140xN.4348342177_q08y.jpg",
+      "name": "begginers guide 2",
+      "price": 200,
+      "videos": [
+        {
+          "name": "1",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "2",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        },
+        {
+          "name": "3",
+          "url": "https://www.w3schools.com/html/mov_bbb.mp4"
+        }
+      ]
+    }
+  ]
+}

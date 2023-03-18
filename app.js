@@ -12,7 +12,7 @@ app.use("/users",    require("./routes/userRoutes"));
 app.use("/products", require("./routes/productRoutes"));
 app.use("/courses",  require("./routes/courseRoutes"));
 app.use(errorHandler);
-app.use(cors());
+// app.use(cors());
 app.get('/users/:id', function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for all origins!'})
 })

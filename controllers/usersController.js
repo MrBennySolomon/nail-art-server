@@ -1,12 +1,14 @@
 const asyncHandler    = require("express-async-handler");
 const fs              = require("fs");
+const User            = require("../models/userModel");
 
 //@desc Get all users
 //@route GET /users
 //@access public
 const getAllUsers     = asyncHandler(async (req, res) => {
-  const usersJson     = fs.readFileSync('./db/users.json');
-  res.status(200).json(`${usersJson}`);
+  const users         = await User.find()
+  // const usersJson     = fs.readFileSync('./db/users.json');
+  res.status(200).json(`${users}`);
 });
 
 //@desc Create new user

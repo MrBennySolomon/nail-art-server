@@ -24,9 +24,9 @@ const createUser      = asyncHandler(async (req, res) => {
 //@route GET /users/:id
 //@access public
 const getUser         = asyncHandler(async (req, res) => {
-  const usersJson = fs.readFileSync('./db/users.json');
-  const users     = JSON.parse(usersJson);
-  const user      = users.find((usr) => Number(usr.id) === Number(req.params.id));
+  const usersJson     = fs.readFileSync('./db/users.json');
+  const users         = JSON.parse(usersJson);
+  const user          = users.find((usr) => Number(usr.id) === Number(req.params.id));
   res.status(200).json(JSON.stringify(`${JSON.stringify(user)}`));
 });
 

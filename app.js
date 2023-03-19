@@ -13,7 +13,7 @@ console.log('port', port);
 
 app.use(express.json());
 app.use(errorHandler);
-app.use(cors({origin: '*'}));
+app.use(cors());
 
 app.use("/users",    require("./routes/userRoutes"));
 app.use("/products", require("./routes/productRoutes"));

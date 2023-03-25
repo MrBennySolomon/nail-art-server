@@ -1,48 +1,34 @@
-const { constants } = require("../constants");
+const ErrorResponse = require("../utils/ErrorResponse.js");
 
-const errorHandler  = (err, req, res, next) => {
-  const statusCode  = res.statusCode ? res.statusCode : 500;
+const errorHandler = (error, req, res, next) => {
+  let err = { ...error };
 
-  switch (statusCode) {
-    case constants.VALIDATION_ERROR:
-      res.json({
-        title: "Validation Failed",
-        message: err.message,
-        stackTrace: err.stack
-      });
-      break;
-    case constants.NOT_FOUND:
-      res.json({
-        title: "Not Found",
-        message: err.message,
-        stackTrace: err.stack
-      });
-      break;
-    case constants.UNAUTHORIZED:
-      res.json({
-        title: "Unauthorized",
-        message: err.message,
-        stackTrace: err.stack
-      });
-      break;
-    case constants.FORBIDDEN:
-      res.json({
-        title: "Forbidden",
-        message: err.message,
-        stackTrace: err.stack
-      });
-      break;
-    case constants.SERVER_ERROR:
-      res.json({
-        title: "Server Error",
-        message: err.message,
-        stackTrace: err.stack
-      });
-      break;
-    default:
-      console.log("No Error, All good !");
-      break;
+  err.message = error.message;
+
+  console.log(error.stack.red);
+
+  // Mongoose bad ObjectId
+  if (error.name === 'CastError') {
+    const message = `Resource not found with id that end with ${error.value.slice(-6)} was not found`;
+    err = new ErrorResponse(message, 404);
   }
+
+  // Mongoose duplicate key
+  if (error.code === 11000) {
+    const message = 'Duplicate field value entered';
+    err = new ErrorResponse(message, 400);
+  }
+
+  // Mongoose validation error
+  if (err.name === 'ValidationError') {
+    const message = Object.values(err.errors).map(val => val.message).join(', ');
+    err = new ErrorResponse(message, 400);
+  }
+
+  res.status(err.statusCode || 500).json({
+    success: false,
+    error: err.message || 'Server Error'
+  });
 };
 
 module.exports = errorHandler;

@@ -1,28 +1,31 @@
 const mongoose = require("mongoose");
 
-const userSchema = mongoose.Schema({
+const courseSchema = mongoose.Schema({
   name: {
     type: String,
     required: [true, "please add the user name"]
   },
-  email: {
-    type: String,
-    required: [true, "please add the user email"]
+  price: {
+    type: Number,
+    required: [true, "please add price"]
   },
-  password: {
-    type: String,
-    required: [true, "please add the user password"]
+  cartCount: {
+    type: Number,
+    required: [true, "please add cart count"]
   },
-  phone: {
+  imgUrl: {
     type: String,
-    required: [true, "please add a phone number"]
+    required: [true, "please add img url"]
   },
   type: {
-    type: string,
+    type: String,
     required: [true, "please add a user type"]
   },
-  courses:[{}],
-  products:[{}]
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  },
+  videos:[{}]
   },
   {
     toJSON: {
@@ -43,4 +46,4 @@ const userSchema = mongoose.Schema({
     }
   },{timestamps: true});
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Course", courseSchema);
